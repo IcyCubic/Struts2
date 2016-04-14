@@ -6,5 +6,15 @@
 <struts>
     
     
+	<constant name="struts.devMode" value="true" />
+
+	<package name="myPackage" namespace="/myNamespace" extends="struts-default">
+
+		<action name="myAction" class="com.action.HelloAction">
+			<result name="success">/hello.jsp</result>
+		</action>
+
+	</package>
+    
     
 </struts>

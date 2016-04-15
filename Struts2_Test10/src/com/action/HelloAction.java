@@ -1,5 +1,11 @@
 package com.action;
 
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
+
 //import com.opensymphony.xwork2.Action;
 //import com.opensymphony.xwork2.ActionSupport;
 
@@ -23,8 +29,16 @@ public class HelloAction {
 	//註2:  如果我們在 Action 的 execute() method 中回傳一個 "success" 的字串，Struts 2 就會到 struts.xml 中 的 
 	//          action 之下找尋是否有符合的 <result name="success"> 可以對應
 	//註3:  我們可以在 Action 中所提供的 execute() method 裡加入我們的 business logic
+
+//	public String execute() {
+//		System.out.println("2. execute 方法被 Struts 2 自動呼叫.....................................................");
+//		return "success";
+//	}
+
 	public String execute() {
 		System.out.println("2. execute 方法被 Struts 2 自動呼叫.....................................................");
+		HttpSession session = ServletActionContext.getRequest().getSession();
+		session.setAttribute("ename", ename);
 		return "success";
 	}
 }

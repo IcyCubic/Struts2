@@ -4,17 +4,28 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-    
-    
+
+
 	<constant name="struts.devMode" value="true" />
+
+	<!--以下設定全域範圍的國際化資源檔，檔名globalMessages起頭，如globalMessages_zh_TW.properties -->
+	<!--globalMessages名稱可自取 -->
+	<!--無預設值 -->
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
 
 	<package name="myPackage" namespace="/myNamespace" extends="struts-default">
 
+<!-- 		<action name="myAction" class="com.action.HelloAction"> -->
+<!-- 			<result name="success">/hello.jsp</result> -->
+<!-- 		</action> -->
+
 		<action name="myAction" class="com.action.HelloAction">
-			<result name="success">/hello.jsp</result>
+			<result name="success" type="redirect">/hello.jsp</result>
 		</action>
 
+
+
 	</package>
-    
-    
+
+
 </struts>

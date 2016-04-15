@@ -36,6 +36,8 @@ public class HelloAction {
 //	}
 
 	public String execute() {
+//		int i = 0;
+//		int j = 1/i;
 		System.out.println("2. execute 方法被 Struts 2 自動呼叫.....................................................");
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		session.setAttribute("ename", ename);

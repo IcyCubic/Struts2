@@ -14,6 +14,7 @@ import com.opensymphony.xwork2.ActionContext;
 // 註3: 如果 extends ActionSupport ,  則可省去其 public String execute() 方法
 public class HelloAction { 
 	private String ename = "World";
+	private Double sal = 999.0;
 
 	public String getEname() {
 		System.out.println("3. get 方法被 view 的 EL 或 OGNL取值時自動呼叫....................................................");
@@ -23,6 +24,14 @@ public class HelloAction {
 	public void setEname(String ename) {
 		System.out.println("1. set 方法被 Struts 2 自動呼叫.....................................................");
 		this.ename = ename;
+	}
+
+	public Double getSal() {
+		return sal;
+	}
+
+	public void setSal(Double sal) {
+		this.sal = sal;
 	}
 
 	//註1:  execute() method 要回傳一個 String，這個 String 是要告知 Struts2 在執行完 Action 之後，所要導向的頁面

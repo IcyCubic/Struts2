@@ -13,9 +13,9 @@
         
         <form action="<%=request.getContextPath()%>/myNamespace/myAction.action"	method="post">
 			     員工姓名: 
-			    <input type="text" name="ename" value="peter1吳永志" /><p>
+			    <input type="text" name="empVO.ename" value="peter1吳永志" /><p>
 			     員工sal: 
-			    <input type="text" name="sal" /><p>
+			    <input type="text" name="empVO.sal" /><p>
 				<input type="submit" />
 		</form><BR>	</LI>
 		
@@ -24,8 +24,8 @@
 		
 <!-- 		            action name         package namespace -->
 		<s:form action="myAction" namespace="/myNamespace" >
-			<s:textfield name="ename" label="員工姓名"  value="peter1吳永志" />
-			<s:textfield name="sal" label="員工sal" />
+			<s:textfield name="empVO.ename" label="員工姓名"  value="peter1吳永志" />
+			<s:textfield name="empVO.sal" label="員工sal" />
 			<s:submit value="送出" />
 		</s:form></LI>
         

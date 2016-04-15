@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
+import com.emp.model.EmpVO;
 import com.opensymphony.xwork2.ActionContext;
 
 //import com.opensymphony.xwork2.Action;
@@ -13,25 +14,13 @@ import com.opensymphony.xwork2.ActionContext;
 // 註2: 如果 implements Action 介面 , 則須實作其 public String execute() 抽象方法
 // 註3: 如果 extends ActionSupport ,  則可省去其 public String execute() 方法
 public class HelloAction { 
-	private String ename = "World";
-	private Double sal = 999.0;
+	private EmpVO empVO;
 
-	public String getEname() {
-		System.out.println("3. get 方法被 view 的 EL 或 OGNL取值時自動呼叫....................................................");
-		return ename;
+		public EmpVO getEmpVO() {
+		return empVO;
 	}
-
-	public void setEname(String ename) {
-		System.out.println("1. set 方法被 Struts 2 自動呼叫.....................................................");
-		this.ename = ename;
-	}
-
-	public Double getSal() {
-		return sal;
-	}
-
-	public void setSal(Double sal) {
-		this.sal = sal;
+	public void setEmpVO(EmpVO empVO) {
+		this.empVO = empVO;
 	}
 
 	//註1:  execute() method 要回傳一個 String，這個 String 是要告知 Struts2 在執行完 Action 之後，所要導向的頁面

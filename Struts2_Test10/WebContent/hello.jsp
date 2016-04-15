@@ -12,11 +12,11 @@
 <h3>我是展示層 (view) hello.jsp</h3>
 <UL>
 
-        <LI>  sal = ${requestScope.ename}                【EL取值】</LI>
-        <LI>  sal = <s:property value="ename" />  【OGNL取值】</LI>
+        <LI>  sal = ${requestScope.empVO.ename}                【EL取值】</LI>
+        <LI>  sal = <s:property value="empVO.ename" />  【OGNL取值】</LI>
 <hr>
-        <LI>  sal = ${requestScope.sal}                【EL取值】</LI>
-        <LI>  sal = <s:property value="sal" />  【OGNL取值】</LI>
+        <LI>  sal = ${requestScope.empVO.sal}                【EL取值】</LI>
+        <LI>  sal = <s:property value="empVO.sal" />  【OGNL取值】</LI>
 
  </UL>
 </body>

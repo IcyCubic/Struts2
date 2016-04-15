@@ -27,15 +27,9 @@
 		</global-exception-mappings>
 
 
-		<!-- <action name="myAction" class="com.action.HelloAction"> -->
-		<!-- <result name="success">/hello.jsp</result> -->
-		<!-- </action> -->
-
 		<action name="myAction" class="com.action.HelloAction">
-			<result name="success" type="redirect">/hello.jsp</result>
+		<result name="success">/hello.jsp</result>
 		</action>
-
-
 
 	</package>
 

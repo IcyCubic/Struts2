@@ -30,17 +30,10 @@ public class HelloAction {
 	//          action 之下找尋是否有符合的 <result name="success"> 可以對應
 	//註3:  我們可以在 Action 中所提供的 execute() method 裡加入我們的 business logic
 
-//	public String execute() {
-//		System.out.println("2. execute 方法被 Struts 2 自動呼叫.....................................................");
-//		return "success";
-//	}
-
 	public String execute() {
-		int i = 0;
-		int j = 1/i;
 		System.out.println("2. execute 方法被 Struts 2 自動呼叫.....................................................");
-		HttpSession session = ServletActionContext.getRequest().getSession();
-		session.setAttribute("ename", ename);
 		return "success";
 	}
+
+
 }

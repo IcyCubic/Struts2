@@ -11,7 +11,9 @@
 
         <LI><font color="blue"><b>傳統的Html標籤</b></font>
         
-        <form action="<%=request.getContextPath()%>/myNamespace/myAction.action"	method="post">
+        <form action="<%=request.getContextPath()%>/myNamespace/myAction.action" method="post">
+        		<!-- Error field for traditional HTML -->
+        		<s:fielderror cssStyle="color:blue"></s:fielderror> 
 			     員工姓名: 
 			    <input type="text" name="empVO.ename" value="peter1吳永志" /><p>
 			     員工sal: 
@@ -28,6 +30,11 @@
 			<s:textfield name="empVO.sal" label="員工sal" />
 			<s:submit value="送出" />
 		</s:form></LI>
+
+<!-- Counter for the number of times this page was loaded -->
+<%! int counter=0; %> 
+<%= ++counter %>
+
         
 </OL>
 </body>

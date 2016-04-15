@@ -8,12 +8,12 @@ import com.emp.model.EmpVO;
 import com.opensymphony.xwork2.ActionContext;
 
 //import com.opensymphony.xwork2.Action;
-//import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ActionSupport;
 
 // 註1: 如果 Action 類別是一個 POJO , 那程式中的 execute() method 是必要元素
 // 註2: 如果 implements Action 介面 , 則須實作其 public String execute() 抽象方法
 // 註3: 如果 extends ActionSupport ,  則可省去其 public String execute() 方法
-public class HelloAction { 
+public class HelloAction extends ActionSupport { 
 	private EmpVO empVO;
 
 		public EmpVO getEmpVO() {

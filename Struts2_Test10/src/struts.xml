@@ -29,6 +29,8 @@
 
 		<action name="myAction" class="com.action.HelloAction">
 		<result name="success">/hello.jsp</result>
+		<!-- used to designate target for error messages -->
+		<result name="input">/form.jsp</result> 
 		</action>
 
 	</package>

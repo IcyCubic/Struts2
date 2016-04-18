@@ -32,6 +32,10 @@ public class HelloAction extends ActionSupport {
 		System.out.println("2. execute 方法被 Struts 2 自動呼叫.....................................................");
 		return "success";
 	}
+	public String add() {
+		System.out.println("This is the add() method!");
+		return "success";
+	}
 
 
 }

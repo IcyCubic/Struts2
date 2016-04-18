@@ -26,11 +26,12 @@
 			<exception-mapping exception="java.lang.Exception" result="error" />
 		</global-exception-mappings>
 
-
-		<action name="myAction" class="com.action.HelloAction">
-		<result name="success">/hello.jsp</result>
-		<!-- used to designate target for error messages -->
-		<result name="input">/form.jsp</result> 
+	<!-- method here specifies default method to be executed, overwrites the execute() 
+		 default if the action call does not specify method -->
+		<action name="myAction" class="com.action.HelloAction" method="add">
+			<result name="success">/hello.jsp</result>
+			<!-- used to designate target for error messages -->
+			<result name="input">/form.jsp</result> 
 		</action>
 
 	</package>

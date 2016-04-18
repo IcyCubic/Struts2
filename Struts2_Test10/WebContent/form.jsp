@@ -53,7 +53,6 @@
 // 		    var m = (today.getMinutes()<10?'0':'') + today.getMinutes();
 // 		    var time = h + ':' + m;
 		    
-		    alert(today);
 			if (picker1.getValue() == "")
 				picker1.setValue(today); //Date value  //picker.setValue('2007-01-01');  //string value
 			if (picker2.getValue() == "")

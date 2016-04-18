@@ -29,7 +29,8 @@
 	<!-- method here specifies default method to be executed, overwrites the execute() 
 		 default if the action call does not specify method -->
 		<action name="myAction" class="com.action.HelloAction" method="add">
-			<result name="success">/hello.jsp</result>
+<!-- 			<result name="success">/hello.jsp</result> -->
+			<result name="success">/hello_EL_OGNL3.jsp</result>
 			<!-- used to designate target for error messages -->
 			<result name="input">/form.jsp</result> 
 		</action>

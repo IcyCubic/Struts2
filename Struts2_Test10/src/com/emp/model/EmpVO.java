@@ -1,11 +1,12 @@
 package com.emp.model;
-import java.sql.Date;
+import java.sql.*;
 
 public class EmpVO implements java.io.Serializable{
 	private Integer empno;
 	private String ename;
 	private String job;
 	private Date hiredate;
+	private Time hiretime;
 	private Double sal;
 	private Double comm;
 	private Integer deptno;
@@ -33,6 +34,12 @@ public class EmpVO implements java.io.Serializable{
 	}
 	public void setHiredate(Date hiredate) {
 		this.hiredate = hiredate;
+	}
+	public Time getHiretime() {
+		return hiretime;
+	}
+	public void setHiretime(Time hiretime) {
+		this.hiretime = hiretime;
 	}
 	public Double getSal() {
 		return sal;

@@ -9,6 +9,8 @@
 <s:head theme="xhtml" /> <!--預設為 xhtml --> <!--theme 可為 xhtml 或 simple 或 css_xhtml --> 
 </head>
 <body>
+<h2><s:text name="hello.message" /></h2>
+<hr>
 <h3>我是展示層 (view) hello.jsp</h3>
 <UL>
 
@@ -23,5 +25,7 @@
         <LI>  hiretime = <s:property value="empVO.hiretime" />  【OGNL取值】</LI>
 
  </UL>
+ 
+
 </body>
 </html>

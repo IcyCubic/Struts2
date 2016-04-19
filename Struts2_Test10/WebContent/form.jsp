@@ -22,7 +22,8 @@
 <!-- 			    <input type="text" name="empVO.sal" /><p> -->
 <!-- 				<input type="submit" /> -->
 <!-- 		</form><BR>	</LI> -->
-		
+
+<h2><s:text name="hello.message" /></h2>		
 		
 		<LI><font color="blue"><b>Struts2的表單UI標籤</b></font>
 		
@@ -39,9 +40,24 @@
 <!-- Counter for the number of times this page was loaded -->
 <%! int counter=0; %> 
 <%= ++counter %>
-
-        
+      
 </OL>
+ <UL>
+    <LI>
+             <s:url id="url" action="myAction">
+                   <s:param name="request_locale">zh_TW</s:param>
+             </s:url>
+             <s:a href="%{url}">中文</s:a>
+    </LI>
+</UL>
+
+<UL>
+     <LI>
+             <a href="<s:url action="myAction">
+                    <s:param name="request_locale">en_US</s:param>
+             </s:url>">英文</a>
+   </LI>
+</UL>
 	<script type="text/javascript">
 		function setValue() {
 			document.getElementById('picker1').children[1].setAttribute("readOnly","true");
